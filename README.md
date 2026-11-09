@@ -1,7 +1,7 @@
 ## The discourse discussion transformer ##
 ### What it is ###
 This tool is used to create and post future inductions using discourse posts to populate data
-This tool will use the below as options from the user:
+### This tool will use the below as options from the user:
  - The tool that is being inducted
  - The date of the induction
  - The cutoff date for the induction
@@ -15,7 +15,7 @@ This tool will use the below as options from the user:
  - The raw template
  - The Raw inductee list
  - The processed post
- - A title that will be formatted as <Incuction name> - <incudtion date and time>
+ - A title that will be formatted as \<Incuction name\> - \<incudtion date and time\>
 
 An option to create a post will also be enabled.
 The post is to be made as the user going through this process
