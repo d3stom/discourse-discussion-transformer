@@ -6,4 +6,3 @@
 Discourse::Application.routes.append do
   get "/discussion-transformer" => "list#latest"
 end
-
