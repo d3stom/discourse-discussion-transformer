@@ -3,14 +3,17 @@
     <h1>Induction Post Creator</h1>
 
     <label for="source-topic-id">Source topic ID</label>
-  {{combo-box
-    value=sourceTopicId
-    content=sourceTopics
-    optionLabelPath="title"
-    optionValuePath="id"
-    id="source-topic"
-    class="source-topic-dropdown"
-  }}
+    {{combo-box
+      value=@controller.sourceTopicId
+      content=@controller.sourceTopics
+      optionLabelPath="title"
+      optionValuePath="id"
+      id="source-topic"
+      class="source-topic-dropdown"
+    }}
+
+
+
     <label for="topic-title">New topic title</label>
     <input
       id="topic-title"

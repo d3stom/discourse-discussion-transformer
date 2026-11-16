@@ -4,8 +4,7 @@ import { tracked } from "@glimmer/tracking";
 import { ajax } from "discourse/lib/ajax";
 
 export default class DiscussionTransformerController extends Controller {
-  @tracked topicId = "";
-  @tracked categoryId = "";
+  @tracked sourceTopicId = "";
   @tracked title = "";
   @tracked raw = "";
   @tracked preview = null;
@@ -71,7 +70,6 @@ export default class DiscussionTransformerController extends Controller {
       const result = await ajax("/discussion-transformer/create.json", {
         type: "POST",
         data: {
-          category_id: this.categoryId,
           title: this.title,
           raw: this.raw,
         },
