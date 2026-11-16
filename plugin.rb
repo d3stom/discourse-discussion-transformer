@@ -4,7 +4,7 @@
 # authors: Destom
 # url: https://github.com/d3stom/discourse-discussion-transformer
 
-Discourse::Application.routes.append do
+Discourse::Application.routes.prepend do
   get "/discussion-transformer" => "list#latest"
 
   get "/discussion-transformer/access" =>
