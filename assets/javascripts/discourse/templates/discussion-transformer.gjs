@@ -1,28 +1,16 @@
 <template>
   <div class="discussion-transformer">
-    <h1>Discussion Transformer</h1>
+    <h1>Induction Post Creator</h1>
 
     <label for="source-topic-id">Source topic ID</label>
-    <input
-      id="source-topic-id"
-      value={{@controller.topicId}}
-      {{on "input" (fn @controller.updateField "topicId")}}
-    />
-    <button
-      type="button"
-      disabled={{@controller.busy}}
-      {{on "click" @controller.loadSource}}
-    >
-      Load source
-    </button>
-
-    <label for="category-id">Destination category ID</label>
-    <input
-      id="category-id"
-      value={{@controller.categoryId}}
-      {{on "input" (fn @controller.updateField "categoryId")}}
-    />
-
+  {{combo-box
+    value=sourceTopicId
+    content=sourceTopics
+    optionLabelPath="title"
+    optionValuePath="id"
+    id="source-topic"
+    class="source-topic-dropdown"
+  }}
     <label for="topic-title">New topic title</label>
     <input
       id="topic-title"
