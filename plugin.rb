@@ -4,6 +4,11 @@
 # authors: Destom
 # url: https://github.com/d3stom/discourse-discussion-transformer
 
+after_initialize do
+  require_relative "app/controllers/discussion_transformer_controller"
+end
+
+
 Discourse::Application.routes.prepend do
   get "/discussion-transformer" => "list#latest"
 
